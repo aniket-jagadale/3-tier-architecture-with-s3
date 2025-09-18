@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Upload Form</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .upload-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 350px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .upload-card:hover {
+            transform: scale(1.05);
+        }
+        h2 {
+            color: #ff4b2b;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="file"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff4b2b;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+        input[type="text"]:focus, textarea:focus {
+            border-color: #ff416c;
+            box-shadow: 0 0 8px #ff416c;
+        }
+        input[type="submit"] {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background: linear-gradient(45deg, #ff4b2b, #ff416c);
+            box-shadow: 0 5px 15px rgba(255,65,108,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-card">
+        <h2>✨ Upload Your Image ✨</h2>
+        <form action="index.php" method="post" enctype="multipart/form-data">
+            
+            <input type="text" name="name" placeholder="Enter your name" required>
+            
+            <textarea name="caption" rows="3" placeholder="Write a cool caption..." required></textarea>
+            
+            <input type="file" name="anyfile" id="anyfile" required>
+            
+            <input type="submit" value="Upload Now 🚀" name="submit">
+        </form>
+    </div>
+</body>
+</html>
